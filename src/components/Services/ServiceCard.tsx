@@ -1,4 +1,4 @@
-import './ServiceCard.css'
+import './ServiceCard.css';
 
 interface ServiceCardProps {
   title: string;
@@ -11,7 +11,7 @@ const ServiceCard = ({ title, description }: ServiceCardProps) => {
       <h3>{title}</h3>
       <p>{description}</p>
     </div>
-  )
-}
+  );
+};
 
-export default ServiceCard 
+export default ServiceCard;

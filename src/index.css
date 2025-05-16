@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --dark-bg: #0D1117;
-  --primary-blue: #00C2FF;
-  --primary-green: #00FF85;
+  --dark-bg: #0d1117;
+  --primary-blue: #00c2ff;
+  --primary-blue-light: #33d6ff;
+  --primary-green: #00ff85;
   --text-light: #ffffff;
   --text-muted: #8b949e;
   --gradient-primary: linear-gradient(90deg, var(--primary-blue), var(--primary-green));
-  
+
   font-family: 'Inter', system-ui, sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -24,7 +25,12 @@ body {
   color: var(--text-light);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Poppins', sans-serif;
   margin-top: 0;
 }

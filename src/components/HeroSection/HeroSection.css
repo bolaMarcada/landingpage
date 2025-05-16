@@ -7,9 +7,14 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background-color: #0D1117;
+  background-color: #0d1117;
   padding: 2rem;
-  font-family: 'Inter', 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family:
+    'Inter',
+    'Poppins',
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
 }
 
 /* Background e elementos decorativos */
@@ -29,7 +34,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background: 
+  background:
     radial-gradient(circle at 20% 20%, rgba(0, 194, 255, 0.12), transparent 40%),
     radial-gradient(circle at 80% 80%, rgba(0, 255, 133, 0.12), transparent 40%);
 }
@@ -127,7 +132,9 @@
   z-index: 2;
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
   display: flex;
   flex-direction: column;
 }
@@ -178,7 +185,7 @@
 }
 
 .highlight {
-  background: linear-gradient(135deg, #00C2FF, #00FF85);
+  background: linear-gradient(135deg, #00c2ff, #00ff85);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -278,14 +285,53 @@
   bottom: 0;
   right: 0;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  background: 
-    linear-gradient(90deg, transparent 0%, transparent 20%, rgba(255,255,255,0.1) 20%, rgba(255,255,255,0.1) 21%, transparent 21%, transparent 40%, rgba(255,255,255,0.1) 40%, rgba(255,255,255,0.1) 41%, transparent 41%, transparent 60%, rgba(255,255,255,0.1) 60%, rgba(255,255,255,0.1) 61%, transparent 61%, transparent 80%, rgba(255,255,255,0.1) 80%, rgba(255,255,255,0.1) 81%, transparent 81%),
-    linear-gradient(0deg, transparent 0%, transparent 20%, rgba(255,255,255,0.1) 20%, rgba(255,255,255,0.1) 21%, transparent 21%, transparent 40%, rgba(255,255,255,0.1) 40%, rgba(255,255,255,0.1) 41%, transparent 41%, transparent 60%, rgba(255,255,255,0.1) 60%, rgba(255,255,255,0.1) 61%, transparent 61%, transparent 80%, rgba(255,255,255,0.1) 80%, rgba(255,255,255,0.1) 81%, transparent 81%);
+  background:
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      transparent 20%,
+      rgba(255, 255, 255, 0.1) 20%,
+      rgba(255, 255, 255, 0.1) 21%,
+      transparent 21%,
+      transparent 40%,
+      rgba(255, 255, 255, 0.1) 40%,
+      rgba(255, 255, 255, 0.1) 41%,
+      transparent 41%,
+      transparent 60%,
+      rgba(255, 255, 255, 0.1) 60%,
+      rgba(255, 255, 255, 0.1) 61%,
+      transparent 61%,
+      transparent 80%,
+      rgba(255, 255, 255, 0.1) 80%,
+      rgba(255, 255, 255, 0.1) 81%,
+      transparent 81%
+    ),
+    linear-gradient(
+      0deg,
+      transparent 0%,
+      transparent 20%,
+      rgba(255, 255, 255, 0.1) 20%,
+      rgba(255, 255, 255, 0.1) 21%,
+      transparent 21%,
+      transparent 40%,
+      rgba(255, 255, 255, 0.1) 40%,
+      rgba(255, 255, 255, 0.1) 41%,
+      transparent 41%,
+      transparent 60%,
+      rgba(255, 255, 255, 0.1) 60%,
+      rgba(255, 255, 255, 0.1) 61%,
+      transparent 61%,
+      transparent 80%,
+      rgba(255, 255, 255, 0.1) 80%,
+      rgba(255, 255, 255, 0.1) 81%,
+      transparent 81%
+    );
 }
 
 /* Animações */
 @keyframes float-slow {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0) scale(1);
   }
   50% {
@@ -298,7 +344,8 @@
 }
 
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -307,7 +354,8 @@
 }
 
 @keyframes bounce {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -365,16 +413,18 @@
 .hero .cta-button {
   padding: 1rem 2.5rem;
   font-size: 1.1rem;
-  background: linear-gradient(135deg, #00C2FF, #00FF85);
+  background: linear-gradient(135deg, #00c2ff, #00ff85);
   border: none;
   border-radius: 50px;
-  color: #0D1117;
+  color: #0d1117;
   font-weight: 600;
   cursor: pointer;
   position: relative;
   overflow: hidden;
   z-index: 1;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   box-shadow: 0 8px 30px rgba(0, 194, 255, 0.3);
 }
 
@@ -385,7 +435,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #00FF85, #00C2FF);
+  background: linear-gradient(135deg, #00ff85, #00c2ff);
   z-index: -1;
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -409,11 +459,11 @@
   .hero-content-wrapper {
     gap: 2rem;
   }
-  
+
   .hero-slogan {
     font-size: 3rem;
   }
-  
+
   .mascot-image {
     max-width: 250px;
   }
@@ -423,33 +473,33 @@
   .hero {
     padding: 6rem 1.5rem;
   }
-  
+
   .hero-logo-container {
     justify-content: center;
   }
-  
+
   .hero-content-wrapper {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
-  
+
   .hero-left {
     align-items: center;
     text-align: center;
   }
-  
+
   .hero-subtitle {
     max-width: 100%;
   }
-  
+
   .hero-cta {
     align-items: center;
   }
-  
+
   .hero-slogan {
     font-size: 2.5rem;
   }
-  
+
   .mascot-image {
     max-width: 220px;
   }
@@ -459,13 +509,13 @@
   .hero-slogan {
     font-size: 2rem;
   }
-  
+
   .hero-subtitle {
     font-size: 1.1rem;
   }
-  
+
   .ball-element {
     width: 30px;
     height: 30px;
   }
-} 
+}

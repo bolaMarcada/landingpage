@@ -1,5 +1,7 @@
-import './FeaturesSection.css'
-import { useEffect, useState } from 'react'
+import './FeaturesSection.css';
+import { useEffect, useState } from 'react';
+
+import avatar from '../../assets/images/avatar-removebg.png';
 
 const FeaturesSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -10,7 +12,7 @@ const FeaturesSection = () => {
       if (featuresSection) {
         const rect = featuresSection.getBoundingClientRect();
         const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-        
+
         if (rect.top <= windowHeight * 0.75) {
           setIsVisible(true);
         }
@@ -19,7 +21,7 @@ const FeaturesSection = () => {
 
     window.addEventListener('scroll', handleScroll);
     handleScroll();
-    
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -29,33 +31,33 @@ const FeaturesSection = () => {
     {
       icon: '🗓️',
       title: 'Agendamento Online',
-      description: 'Seus horários sempre organizados e fáceis de visualizar'
+      description: 'Seus horários sempre organizados e fáceis de visualizar',
     },
     {
       icon: '💰',
       title: 'Controle Financeiro',
-      description: 'Veja ganhos por dia, semana e mês com clareza total'
+      description: 'Veja ganhos por dia, semana e mês com clareza total',
     },
     {
       icon: '📱',
       title: 'App para jogadores',
-      description: 'Jogadores podem reservar direto do celular, sem complicações'
+      description: 'Jogadores podem reservar direto do celular, sem complicações',
     },
     {
       icon: '📊',
       title: 'Relatórios Inteligentes',
-      description: 'Acompanhe desempenho e lotação em tempo real'
+      description: 'Acompanhe desempenho e lotação em tempo real',
     },
     {
       icon: '🧾',
       title: 'Gestão de Pagamentos',
-      description: 'Pix, crédito ou presencial: você escolhe como receber'
+      description: 'Pix, crédito ou presencial: você escolhe como receber',
     },
     {
       icon: '🔔',
       title: 'Lembretes e Notificações',
-      description: 'Alertas para pagamentos, reservas e confirmações de jogos'
-    }
+      description: 'Alertas para pagamentos, reservas e confirmações de jogos',
+    },
   ];
 
   return (
@@ -64,10 +66,13 @@ const FeaturesSection = () => {
       <div className="center-circle"></div>
       <div className={`features-container ${isVisible ? 'fade-in' : ''}`}>
         <div className="features-header">
-        <div className="midfield-line"></div>
-          <h2 className="features-title">Chega de papel, planilha e grupo no WhatsApp pra marcar jogo.</h2>
+          <div className="midfield-line"></div>
+          <h2 className="features-title">
+            Chega de papel, planilha e grupo no WhatsApp pra marcar jogo.
+          </h2>
           <p className="features-subtitle">
-            Do agendamento ao pagamento, tudo no seu controle. Fácil, rápido e com a cara do futebol.
+            Do agendamento ao pagamento, tudo no seu controle. Fácil, rápido e com a cara do
+            futebol.
           </p>
           <div className="features-divider"></div>
         </div>
@@ -89,15 +94,11 @@ const FeaturesSection = () => {
           <div className="mascot-speech-bubble">
             <p>Veja como é fácil gerenciar seu campo!</p>
           </div>
-          <img 
-            src="/src/assets/images/avatar-removebg.png" 
-            alt="Mascote do BolaMarcada" 
-            className="mascot-image"
-          />
+          <img src={avatar} alt="Mascote do BolaMarcada" className="mascot-image" />
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default FeaturesSection 
+export default FeaturesSection;

@@ -1,4 +1,4 @@
-import './CTAButton.css'
+import './CTAButton.css';
 
 interface CTAButtonProps {
   text: string;
@@ -10,7 +10,7 @@ const CTAButton = ({ text, onClick }: CTAButtonProps) => {
     <button className="cta-button" onClick={onClick}>
       {text}
     </button>
-  )
-}
+  );
+};
 
-export default CTAButton 
+export default CTAButton;

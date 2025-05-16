@@ -1,11 +1,11 @@
-import './App.css'
-import Header from './components/Header/Header'
-import HeroSection from './components/HeroSection/HeroSection'
-import AboutSection from './components/About/AboutSection'
-import FeaturesSection from './components/Features/FeaturesSection'
-import PricingSection from './components/PricingSection'
-import FinalCTASection from './components/FinalCTASection/FinalCTASection'
-import Footer from './components/Footer/Footer'
+import './App.css';
+import AboutSection from './components/About/AboutSection';
+import FeaturesSection from './components/Features/FeaturesSection';
+import FinalCTASection from './components/FinalCTASection/FinalCTASection';
+import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header';
+import HeroSection from './components/HeroSection/HeroSection';
+import PricingSection from './components/PricingSection';
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
       </main>
       <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

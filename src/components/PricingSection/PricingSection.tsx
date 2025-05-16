@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { motion } from 'framer-motion';
 import { FaCalendarAlt, FaChartLine, FaUsers, FaCreditCard, FaHeadset } from 'react-icons/fa';
 import { MdSportsSoccer, MdShield } from 'react-icons/md';
@@ -27,25 +28,25 @@ const pricingPlans: PricingPlan[] = [
     features: [
       {
         icon: <FaCalendarAlt />,
-        text: 'Agenda online e controle de horários'
+        text: 'Agenda online e controle de horários',
       },
       {
         icon: <FaUsers />,
-        text: 'Gestão de até 100 clientes e times'
+        text: 'Gestão de até 100 clientes e times',
       },
       {
         icon: <FaChartLine />,
-        text: 'Relatórios básicos de receita'
+        text: 'Relatórios básicos de receita',
       },
       {
         icon: <MdShield />,
-        text: 'Até 2 usuários com permissões'
+        text: 'Até 2 usuários com permissões',
       },
       {
         icon: <FaCreditCard />,
-        text: 'Integração com PIX e cartão'
-      }
-    ]
+        text: 'Integração com PIX e cartão',
+      },
+    ],
   },
   {
     name: 'Jogo Corrido',
@@ -56,30 +57,30 @@ const pricingPlans: PricingPlan[] = [
     features: [
       {
         icon: <FaCalendarAlt />,
-        text: 'Agenda multi-quadras e gestão de conflitos'
+        text: 'Agenda multi-quadras e gestão de conflitos',
       },
       {
         icon: <FaUsers />,
-        text: 'Gestão ilimitada de clientes e times'
+        text: 'Gestão ilimitada de clientes e times',
       },
       {
         icon: <FaChartLine />,
-        text: 'Relatórios avançados de desempenho'
+        text: 'Relatórios avançados de desempenho',
       },
       {
         icon: <MdShield />,
-        text: 'Até 5 usuários com permissões'
+        text: 'Até 5 usuários com permissões',
       },
       {
         icon: <FaCreditCard />,
-        text: 'Integração com múltiplas formas de pagamento'
+        text: 'Integração com múltiplas formas de pagamento',
       },
       {
         icon: <FaHeadset />,
-        text: 'Suporte prioritário por WhatsApp'
-      }
+        text: 'Suporte prioritário por WhatsApp',
+      },
     ],
-    isPopular: true
+    isPopular: true,
   },
   {
     name: 'Virada de Placar',
@@ -90,35 +91,35 @@ const pricingPlans: PricingPlan[] = [
     features: [
       {
         icon: <FaCalendarAlt />,
-        text: 'Sistema de agendamento em rede'
+        text: 'Sistema de agendamento em rede',
       },
       {
         icon: <FaUsers />,
-        text: 'Gestão centralizada de todas as unidades'
+        text: 'Gestão centralizada de todas as unidades',
       },
       {
         icon: <FaChartLine />,
-        text: 'Relatórios consolidados e personalizados'
+        text: 'Relatórios consolidados e personalizados',
       },
       {
         icon: <MdShield />,
-        text: 'Usuários ilimitados com permissões'
+        text: 'Usuários ilimitados com permissões',
       },
       {
         icon: <FaCreditCard />,
-        text: 'Integração com sistemas de gestão'
+        text: 'Integração com sistemas de gestão',
       },
       {
         icon: <FaHeadset />,
-        text: 'Gerente de conta dedicado'
-      }
-    ]
-  }
+        text: 'Gerente de conta dedicado',
+      },
+    ],
+  },
 ];
 
 const PricingSection = () => {
   return (
-    <section className="pricing-section">
+    <section className="pricing-section" id="precos">
       <div className="pricing-container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -127,12 +128,8 @@ const PricingSection = () => {
           transition={{ duration: 0.5 }}
           className="pricing-header"
         >
-          <h2 className="pricing-title">
-            Planos sob medida para sua quadra
-          </h2>
-          <p className="pricing-description">
-            Desde a primeira pelada até o calendário lotado
-          </p>
+          <h2 className="pricing-title">Planos sob medida para sua quadra</h2>
+          <p className="pricing-description">Desde a primeira pelada até o calendário lotado</p>
         </motion.div>
 
         <div className="pricing-grid">
@@ -145,43 +142,29 @@ const PricingSection = () => {
               transition={{ duration: 0.5, delay: index * 0.2 }}
               className={`pricing-card ${plan.isPopular ? 'popular' : ''}`}
             >
-              {plan.isPopular && (
-                <div className="popular-badge">
-                  Mais Popular
-                </div>
-              )}
-              
+              {plan.isPopular && <div className="popular-badge">Mais Popular</div>}
+
               <div className="card-header">
                 {plan.icon}
                 <h3 className="card-title">{plan.name}</h3>
               </div>
 
-              <div className="card-tag">
-                {plan.tag}
-              </div>
+              <div className="card-tag">{plan.tag}</div>
 
-              <div className="card-description">
-                {plan.description}
-              </div>
+              <div className="card-description">{plan.description}</div>
 
-              <div className="card-price">
-                {plan.price}
-              </div>
+              <div className="card-price">{plan.price}</div>
 
               <ul className="features-list">
                 {plan.features.map((feature, i) => (
                   <li key={i} className="feature-item">
-                    <div className="feature-icon">
-                      {feature.icon}
-                    </div>
+                    <div className="feature-icon">{feature.icon}</div>
                     <span>{feature.text}</span>
                   </li>
                 ))}
               </ul>
 
-              <button className="cta-button">
-                Quero esse plano
-              </button>
+              <button className="cta-button">Quero esse plano</button>
 
               <div className="card-glow" />
             </motion.div>
@@ -192,4 +175,4 @@ const PricingSection = () => {
   );
 };
 
-export default PricingSection; 
+export default PricingSection;
