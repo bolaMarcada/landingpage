@@ -1,21 +1,22 @@
-import './Footer.css';
 import { FaInstagram, FaTwitter, FaFacebookF, FaWhatsapp } from 'react-icons/fa';
 
 import logo from '../../assets/images/logo.png';
+
+import styles from './Footer.module.css';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
     <footer id="contato">
-      <div className="footer-container">
-        <div className="footer-brand">
-          <img src={logo} alt="Bola Marcada" className="footer-logo" />
-          <p className="slogan">Quem marca, joga. Quem joga, volta.</p>
+      <div className={styles['footer-container']}>
+        <div className={styles['footer-brand']}>
+          <img src={logo} alt="Bola Marcada" className={styles['footer-logo']} />
+          <p className={styles.slogan}>Quem marca, joga. Quem joga, volta.</p>
         </div>
 
-        <div className="footer-links">
-          <div className="links-column">
+        <div className={styles['footer-links']}>
+          <div className={styles['links-column']}>
             <h4>Navegação</h4>
             <ul>
               <li>
@@ -33,7 +34,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="links-column">
+          <div className={styles['links-column']}>
             <h4>Contato</h4>
             <p>Email: contato@bolamarcada.com</p>
             <p>Telefone: (00) 0000-0000</p>
@@ -41,9 +42,9 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="social-media">
+        <div className={styles['social-media']}>
           <h4>Siga-nos</h4>
-          <div className="social-icons">
+          <div className={styles['social-icons']}>
             <a
               href="https://instagram.com"
               target="_blank"
@@ -80,9 +81,9 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="footer-bottom">
+      <div className={styles['footer-bottom']}>
         <p>© {currentYear} Bola Marcada - Todos os direitos reservados</p>
-        <div className="footer-legal">
+        <div className={styles['footer-legal']}>
           <a href="/privacidade">Política de Privacidade</a>
           <a href="/termos">Termos de Uso</a>
         </div>

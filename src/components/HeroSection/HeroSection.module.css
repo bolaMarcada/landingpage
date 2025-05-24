@@ -1,3 +1,5 @@
+/* Conteúdo copiado do HeroSection.css */
+
 /* Seção Hero - Versão Esportiva */
 .hero {
   position: relative;
@@ -410,7 +412,7 @@
 }
 
 /* Botão CTA */
-.hero .cta-button {
+.cta-button {
   padding: 1rem 2.5rem;
   font-size: 1.1rem;
   background: linear-gradient(135deg, #00c2ff, #00ff85);
@@ -428,7 +430,7 @@
   box-shadow: 0 8px 30px rgba(0, 194, 255, 0.3);
 }
 
-.hero .cta-button::before {
+.cta-button::before {
   content: '';
   position: absolute;
   top: 0;
@@ -441,16 +443,16 @@
   transition: opacity 0.3s ease;
 }
 
-.hero .cta-button:hover {
+.cta-button:hover {
   transform: translateY(-5px) scale(1.02);
   box-shadow: 0 12px 40px rgba(0, 194, 255, 0.4);
 }
 
-.hero .cta-button:hover::before {
+.cta-button:hover::before {
   opacity: 1;
 }
 
-.hero .cta-button:active {
+.cta-button:active {
   transform: translateY(0) scale(0.98);
 }
 

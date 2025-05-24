@@ -1,5 +1,5 @@
 import ServiceCard from './ServiceCard';
-import './ServicesSection.css';
+import styles from './ServicesSection.module.css';
 
 const ServicesSection = () => {
   const services = [
@@ -18,9 +18,9 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section className="services" id="servicos">
+    <section className={styles.services} id="servicos">
       <h2>Nossos Serviços</h2>
-      <div className="services-grid">
+      <div className={styles['services-grid']}>
         {services.map((service, index) => (
           <ServiceCard key={index} title={service.title} description={service.description} />
         ))}

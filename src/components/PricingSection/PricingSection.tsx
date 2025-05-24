@@ -3,7 +3,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaCalendarAlt, FaChartLine, FaUsers, FaCreditCard, FaHeadset } from 'react-icons/fa';
 import { MdSportsSoccer, MdShield } from 'react-icons/md';
-import './PricingSection.css';
+
+import styles from './PricingSection.module.css';
 
 interface PricingPlan {
   name: string;
@@ -119,20 +120,22 @@ const pricingPlans: PricingPlan[] = [
 
 const PricingSection = () => {
   return (
-    <section className="pricing-section" id="precos">
-      <div className="pricing-container">
+    <section className={styles['pricing-section']} id="precos">
+      <div className={styles['pricing-container']}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="pricing-header"
+          className={styles['pricing-header']}
         >
-          <h2 className="pricing-title">Planos sob medida para sua quadra</h2>
-          <p className="pricing-description">Desde a primeira pelada até o calendário lotado</p>
+          <h2 className={styles['pricing-title']}>Planos sob medida para sua quadra</h2>
+          <p className={styles['pricing-description']}>
+            Desde a primeira pelada até o calendário lotado
+          </p>
         </motion.div>
 
-        <div className="pricing-grid">
+        <div className={styles['pricing-grid']}>
           {pricingPlans.map((plan, index) => (
             <motion.div
               key={plan.name}
@@ -140,33 +143,33 @@ const PricingSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
-              className={`pricing-card ${plan.isPopular ? 'popular' : ''}`}
+              className={`${styles['pricing-card']} ${plan.isPopular ? styles.popular : ''}`}
             >
-              {plan.isPopular && <div className="popular-badge">Mais Popular</div>}
+              {plan.isPopular && <div className={styles['popular-badge']}>Mais Popular</div>}
 
-              <div className="card-header">
-                {plan.icon}
-                <h3 className="card-title">{plan.name}</h3>
+              <div className={styles['card-header']}>
+                <div className={styles['card-icon']}>{plan.icon}</div>
+                <h3 className={styles['card-title']}>{plan.name}</h3>
               </div>
 
-              <div className="card-tag">{plan.tag}</div>
+              <div className={styles['card-tag']}>{plan.tag}</div>
 
-              <div className="card-description">{plan.description}</div>
+              <div className={styles['card-description']}>{plan.description}</div>
 
-              <div className="card-price">{plan.price}</div>
+              <div className={styles['card-price']}>{plan.price}</div>
 
-              <ul className="features-list">
+              <ul className={styles['features-list']}>
                 {plan.features.map((feature, i) => (
-                  <li key={i} className="feature-item">
-                    <div className="feature-icon">{feature.icon}</div>
+                  <li key={i} className={styles['feature-item']}>
+                    <div className={styles['feature-icon']}>{feature.icon}</div>
                     <span>{feature.text}</span>
                   </li>
                 ))}
               </ul>
 
-              <button className="cta-button">Quero esse plano</button>
+              <button className={styles['cta-button']}>Quero esse plano</button>
 
-              <div className="card-glow" />
+              <div className={styles['card-glow']} />
             </motion.div>
           ))}
         </div>

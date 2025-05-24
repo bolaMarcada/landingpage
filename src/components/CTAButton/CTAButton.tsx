@@ -1,4 +1,4 @@
-import './CTAButton.css';
+import styles from './CTAButton.module.css';
 
 interface CTAButtonProps {
   text: string;
@@ -7,7 +7,7 @@ interface CTAButtonProps {
 
 const CTAButton = ({ text, onClick }: CTAButtonProps) => {
   return (
-    <button className="cta-button" onClick={onClick}>
+    <button className={styles.ctaButton} onClick={onClick}>
       {text}
     </button>
   );

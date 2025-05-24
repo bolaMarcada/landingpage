@@ -3,7 +3,8 @@ import { useState, useEffect } from 'react';
 import { FaInstagram, FaWhatsapp, FaEnvelope } from 'react-icons/fa';
 
 import logo from '../../assets/images/brand.png';
-import './Header.css';
+
+import styles from './Header.module.css';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -68,19 +69,19 @@ const Header = () => {
   };
 
   return (
-    <header className={scrolled ? 'scrolled' : ''}>
-      <div className="header-content">
-        <div className="logo-container">
+    <header className={scrolled ? styles.scrolled : ''}>
+      <div className={styles['header-content']}>
+        <div className={styles['logo-container']}>
           <a href="#inicio" onClick={e => handleLinkClick('inicio', e)}>
-            <img src={logo} alt="Bola Marcada" className="logo" />
-            <span className="brand-name">
+            <img src={logo} alt="Bola Marcada" className={styles.logo} />
+            <span className={styles['brand-name']}>
               Bola<strong>Marcada</strong>
             </span>
           </a>
         </div>
 
         <div
-          className={`mobile-menu-button ${isMenuOpen ? 'active' : ''}`}
+          className={`${styles['mobile-menu-button']} ${isMenuOpen ? styles.active : ''}`}
           onClick={toggleMenu}
           aria-label="Menu"
         >
@@ -89,13 +90,13 @@ const Header = () => {
           <span></span>
         </div>
 
-        <nav className={isMenuOpen ? 'active' : ''}>
-          <ul className="nav-links">
+        <nav className={isMenuOpen ? styles.active : ''}>
+          <ul className={styles['nav-links']}>
             <li>
               <a
                 href="#inicio"
                 onClick={e => handleLinkClick('inicio', e)}
-                className={activeSection === 'inicio' ? 'active' : ''}
+                className={activeSection === 'inicio' ? styles.active : ''}
               >
                 Início
               </a>
@@ -104,7 +105,7 @@ const Header = () => {
               <a
                 href="#sobre"
                 onClick={e => handleLinkClick('sobre', e)}
-                className={activeSection === 'sobre' ? 'active' : ''}
+                className={activeSection === 'sobre' ? styles.active : ''}
               >
                 Sobre
               </a>
@@ -113,7 +114,7 @@ const Header = () => {
               <a
                 href="#recursos"
                 onClick={e => handleLinkClick('recursos', e)}
-                className={activeSection === 'recursos' ? 'active' : ''}
+                className={activeSection === 'recursos' ? styles.active : ''}
               >
                 Recursos
               </a>
@@ -122,14 +123,14 @@ const Header = () => {
               <a
                 href="#precos"
                 onClick={e => handleLinkClick('precos', e)}
-                className={activeSection === 'precos' ? 'active' : ''}
+                className={activeSection === 'precos' ? styles.active : ''}
               >
                 Preços
               </a>
             </li>
           </ul>
 
-          <div className="social-links">
+          <div className={styles['social-links']}>
             <a
               href="https://instagram.com"
               target="_blank"
@@ -154,7 +155,7 @@ const Header = () => {
           <a
             href="#contato"
             onClick={e => handleLinkClick('contato', e)}
-            className={`contact-button ${activeSection === 'contato' ? 'active' : ''}`}
+            className={`${styles['contact-button']} ${activeSection === 'contato' ? styles.active : ''}`}
           >
             Contato
           </a>
