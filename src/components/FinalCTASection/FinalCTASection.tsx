@@ -1,33 +1,11 @@
-import { useState } from 'react';
-
 import { motion } from 'framer-motion';
-import { FaCalendarAlt, FaChartLine, FaCheckCircle, FaUsers } from 'react-icons/fa';
+import { FaCalendarAlt, FaChartLine } from 'react-icons/fa';
 
 import CTAImg from '../../assets/images/CTA-ilustration-1.png';
 
 import styles from './FinalCTASection.module.css';
 
 const FinalCTASection = () => {
-  const [isHovered, setIsHovered] = useState(false);
-
-  const features = [
-    {
-      icon: <FaCalendarAlt size={20} />,
-      title: 'Agendamentos',
-      description: 'Simplifique o processo de marcação',
-    },
-    {
-      icon: <FaUsers size={20} />,
-      title: 'Faltas reduzidas',
-      description: 'Mais jogos confirmados',
-    },
-    {
-      icon: <FaCheckCircle size={20} />,
-      title: 'Pagamentos',
-      description: 'Garantia de recebimento',
-    },
-  ];
-
   return (
     <section className={styles['final-cta-section']} id="contato">
       <div className={styles['final-cta-container']}>
@@ -81,6 +59,18 @@ const FinalCTASection = () => {
           />
         </div>
 
+        {/* ILUSTRAÇÃO INTERATIVA */}
+        <div className={styles['final-cta-image']}>
+          <div className={styles['image-wrapper']}>
+            <img
+              src={CTAImg}
+              alt="Gestão completa para quadras esportivas"
+              className={styles['final-cta-avatar']}
+            />
+            <div className={styles['image-decoration']}></div>
+          </div>
+        </div>
+
         {/* CONTEÚDO E CTAs */}
         <motion.div
           className={styles['final-cta-content']}
@@ -128,100 +118,6 @@ const FinalCTASection = () => {
               <FaCalendarAlt className={styles['button-icon']} />
               Marcar jogo
             </motion.a>
-          </div>
-        </motion.div>
-
-        {/* ILUSTRAÇÃO INTERATIVA */}
-        <motion.div
-          className={styles['final-cta-image']}
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          onHoverStart={() => setIsHovered(true)}
-          onHoverEnd={() => setIsHovered(false)}
-        >
-          <motion.div
-            className={styles['image-container']}
-            animate={
-              isHovered
-                ? {
-                    rotateY: [0, 5, 0, -5, 0],
-                    transition: { duration: 5, repeat: Infinity },
-                  }
-                : {}
-            }
-          >
-            <motion.div
-              className={styles['stats-card']}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.8 }}
-            >
-              <div className={styles['stats-icon']}>
-                <FaChartLine />
-              </div>
-              <div className={styles['stats-content']}>
-                <span className={styles['stats-value']}>+30%</span>
-                <span className={styles['stats-label']}>Ocupação média</span>
-              </div>
-            </motion.div>
-
-            <img
-              src={CTAImg}
-              alt="Gestão completa para quadras esportivas"
-              className={styles['final-cta-avatar']}
-            />
-
-            <motion.div
-              className={styles['image-decoration']}
-              animate={{
-                opacity: [0.5, 0.8, 0.5],
-                scale: [1, 1.05, 1],
-              }}
-              transition={{
-                duration: 4,
-                repeat: Infinity,
-                ease: 'easeInOut',
-              }}
-            ></motion.div>
-
-            <motion.div
-              className={styles['users-card']}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 1 }}
-            >
-              <div className={styles['users-icon']}>
-                <FaUsers />
-              </div>
-              <div className={styles['users-content']}>
-                <span className={styles['users-value']}>-45%</span>
-                <span className={styles['users-label']}>Faltas nos jogos</span>
-              </div>
-            </motion.div>
-          </motion.div>
-
-          <div className={styles['features-wrapper']}>
-            {features.map((feature, index) => (
-              <motion.div
-                key={index}
-                className={styles['feature-card']}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.1 * index }}
-                whileHover={{ y: -5 }}
-              >
-                <div className={styles['feature-icon-wrapper']}>{feature.icon}</div>
-                <div className={styles['feature-content']}>
-                  <h3>{feature.title}</h3>
-                  <p>{feature.description}</p>
-                </div>
-              </motion.div>
-            ))}
           </div>
         </motion.div>
       </div>
